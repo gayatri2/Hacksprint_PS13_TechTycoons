@@ -1,0 +1,158 @@
+.contactus {
+	background-color: #f5f5f5;
+	padding: 100px 0px;
+	text-align: center;
+}
+
+.contactus .contact__box {
+	width: 90%;
+	margin: auto;
+	background-color: white;
+	box-shadow: 10px 10px 5px #e6e4e4;
+	border-radius: 20px;
+}
+
+.contactus{
+	color: #01A29A;
+	font-weight: 700;
+	padding: 17vh 0 20px 0;
+}
+ .contact__box h1 {
+	color: #FFB40A;
+	font-weight: 700;
+	padding: 30px 0 20px 0;
+}
+
+.contactus .contact__box .contact {
+	display: flex;
+}
+
+.contactus .contact__box .contact .contact__left {
+	border-right: 1px solid #FFB40A;
+	width: 50%;
+	margin-bottom: 50px;
+}
+
+.contactus .contact__box .contact .contact__left img {
+	width: 30%;
+	margin: 10px auto;
+}
+
+.contactus .contact__box .contact .contact__left .contact__detail {
+	text-align: left;
+	width: 70%;
+	margin: 40px auto;
+	margin-top: 80px;
+}
+
+.contactus .contact__box .contact .contact__left .contact__detail h5 {
+	font-weight: 500;
+}
+
+.contactus .contact__box .contact .contact__left .contact__detail p {
+	margin: 30px 0;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+}
+
+.contactus .contact__box .contact .contact__left .contact__detail p i {
+	margin-right: 30px;
+	font-weight: bold;
+	color: #01A29A;
+}
+
+.contactus .contact__box .contact .contact__form {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	align-items: center;
+	width: 50%;
+}
+
+.contactus .contact__box .contact .contact__form label {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	margin-bottom: 10px;
+}
+
+.contactus .contact__box .contact .contact__form label .input__label {
+	margin: 0.5rem 0;
+	font-weight: 600;
+}
+
+.contactus .contact__box .contact .contact__form label input {
+	background-color: #f5f5f5;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.contactus .contact__box .contact .contact__form label textarea {
+	background-color: #f5f5f5;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	height: 100px;
+	margin-bottom: 25px;
+}
+
+.contactus .contact__box .contact .contact__form .submit {
+	font-size: 18px;
+	color: white;
+	background-color: #01A29A;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	margin-bottom: 60px;
+	border: none;
+	font-weight: 400;
+}
+
+.contactus .contact__box .contact .contact__form .submit:hover {
+	border: 1px solid #01A29A;
+	background-color: transparent;
+	color: #01A29A;
+}
+
+.contact a {
+	text-decoration: none;
+	color: black;
+}
+
+.contact a:hover {
+	color: #FFB40A;
+}
+
+@media only screen and (max-width: 600px) {
+	.contactus .contact__box .contact {
+		flex-direction: column;
+	}
+	.contactus h1 {
+		font-size: 20px!important;
+	}
+	.contactus .contact__box .contact .contact__left {
+		width: 100%;
+		border-bottom: 1px solid #FFB40A;
+		border-right: none !important;
+	}
+
+	.contactus .contact__box .contact .contact__form {
+		width: 100%;
+	}
+	.contactus .contact__box .contact .contact__left .contact__detail {
+		text-align: left;
+		width: 70%;
+		margin: 40px auto 20px auto !important;
+	}
+	.contactus {
+		padding: 17vh 0px 60px 0;
+	}
+	
+}@media only screen and (max-width: 931px) {
+	.ph-no{
+		display: flex;
+		flex-direction: column;
+	}
+}
