@@ -9,24 +9,31 @@
   padding: 18px 10px;
   padding-bottom: 0px;
 }
-.active__option {
-  border-bottom: 4px solid orangered;
 
+.active__option {
+  border-bottom: 3px solid #fff;
+  color: #fff;
 }
 
 .option{
-  font-size: 1.4em;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(184, 172, 172);
+  font-weight: lighter;
 }
 
 .option:hover {
-  border-bottom: 4px solid orangered;
+  /* border-bottom: 4px solid blueviolet; */
   cursor: pointer;
+  color: #fff;
+  text-decoration: none;
   transition-duration: 200ms;
 }
+
 @media (max-width: 768px) {
   .navbar ul {
     flex-flow: column nowrap;
-    background-color: #e85d04;
+    background-color: blueviolet;
     position: fixed;
     top: 0;
     right: 0;
@@ -37,10 +44,11 @@
   }
 
   .option:hover{
-    border-bottom: black 4px solid;
+    border-bottom: #fff 3px solid;
   }
 
   .active__option{
-    border-bottom: black 4px solid;
+
+    border-bottom: #fff 3px solid;
   }
 }
