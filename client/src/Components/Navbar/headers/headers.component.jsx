@@ -15,7 +15,7 @@ const Ul = styled.ul`
   }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #e85d04;
+    background-color: blueviolet;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
@@ -30,17 +30,18 @@ const Ul = styled.ul`
   }
 `;
 
-
-
 const RightHeader = ({ open, currentUser }) => (
   <Ul className="main-header" open={open}>
-     <li>
-        <NavLink  to='/dashboard' className='option' activeClassName="active__option">
-          Dashboard
-        </NavLink>
-      </li>
-    
-    
+    <li>
+      <NavLink
+        to="/dashboard#pending"
+        className="option"
+        activeClassName="active__option"
+      >
+        Dashboard
+      </NavLink>
+    </li>
+
     <li>
       <NavLink
         to="/menu"
@@ -52,29 +53,31 @@ const RightHeader = ({ open, currentUser }) => (
       </NavLink>
     </li>
 
-    
+    <li>
+      <NavLink
+        to="/inventory"
+        className="option"
+        activeClassName="active__option"
+      >
+        Inventory
+      </NavLink>
+    </li>
 
     <li>
-        <NavLink  to='/inventory' className='option' activeClassName="active__option">
-          Inventory
-        </NavLink>
-      </li>
- 
-      <li>
-        <NavLink  to='/contact-us' className='option' activeClassName="active__option" >
-          Contact Us
-        </NavLink>
-      </li>
-      <li>
-        
-          <NavLink className='option' activeClassName="active__option" to='/login' >
-            Login/Register
-          </NavLink>
-       
-      </li>
+      <NavLink
+        to="/contact-us"
+        className="option"
+        activeClassName="active__option"
+      >
+        Contact Us
+      </NavLink>
+    </li>
+    <li>
+      <NavLink className="option" activeClassName="active__option" to="/login">
+        Logout
+      </NavLink>
+    </li>
   </Ul>
 );
-
-
 
 export default RightHeader;
