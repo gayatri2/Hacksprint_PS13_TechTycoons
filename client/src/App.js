@@ -45,7 +45,7 @@ function App() {
           </Route>
           <Route exact path="/inventory">
             <NavBar />
-            {/* <Inventory/> */}
+            <Inventory/>
           </Route>
           <Route exact path="/contact-us">
             <NavBar />
