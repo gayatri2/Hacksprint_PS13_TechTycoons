@@ -1,0 +1,22 @@
+.welcome-section{
+  height: 300px;
+}
+
+.welcome-section > .landing-message > p{
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 60px;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  
+}
+
+.welcome-section > .landing-image > img{
+  object-fit: contain;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  /* padding: 10px; */
+}
