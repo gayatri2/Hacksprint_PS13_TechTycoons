@@ -4,9 +4,9 @@
 }
 
 :root{
-  --nav-title-font-size: 3rem;
+  --nav-title-font-size: 18px;
   --nav-title-font-weight: bold;
-  --nav-link-font-weight: 300;
+  --nav-link-font-weight: 600;
 }
 
 .header-nav{
@@ -14,7 +14,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 5rem; */
   padding: 20px;
 }
 
@@ -23,14 +22,16 @@
   margin: 0;
   padding: 0;
 }
+
 .header-nav li{
   list-style: none;
 }
+
 .header-nav li a{
   text-decoration: none;
   color: blueviolet;
   font-weight: var(--nav-link-font-weight);
-  padding: 0.6rem;
+  padding: 0.8rem;
 }
 
 /* .header-nav li a:hover, .header-title:hover{

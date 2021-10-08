@@ -17,7 +17,7 @@ function LandingHeader() {
             </a>
           </li>
           <li>
-            <a className="" href="/register">
+            <a className="landing-signup" href="/register">
               Signup
             </a>
           </li>

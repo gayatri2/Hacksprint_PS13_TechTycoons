@@ -33,7 +33,7 @@ const Ul = styled.ul`
 
 
 const RightHeader = ({ open, currentUser }) => (
-  <Ul open={open}>
+  <Ul className="main-header" open={open}>
      <li>
         <NavLink  to='/dashboard' className='option' activeClassName="active__option">
           Dashboard

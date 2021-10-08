@@ -1,11 +1,11 @@
-ul {
+.main-header {
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
   min-width: 70%;
   margin: 0;
 }
-li {
+.main-header > li {
   padding: 18px 10px;
   padding-bottom: 0px;
 }
