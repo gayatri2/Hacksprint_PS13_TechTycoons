@@ -6,7 +6,7 @@ function Menu() {
     <div className='menu-card text-center' >
       <img className='img-fluid ' src={Img} ></img>
     </div>
-  )
+  );
 }
 
-export default Menu
+export default Menu;
