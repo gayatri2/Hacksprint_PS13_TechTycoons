@@ -10,6 +10,7 @@ import Login from "./Pages/Login/Login"
 import Register from "./Pages/Register/Register"
 import Contact from './Pages/Contact/contact'
 import Footer from './Components/Footer/footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <BrowserRouter>
@@ -25,6 +26,11 @@ function App() {
             <Dashboard/>
             <Footer />
           </Route>
+
+          {/* <Route exact path="/dashboard#first">
+            <Contact />    
+        
+          </Route> */}
 
           <Route exact path="/login">
             <Login/>
