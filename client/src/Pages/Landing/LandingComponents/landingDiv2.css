@@ -4,19 +4,21 @@
 
 .welcome-section > .landing-message > p{
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 60px;
   display: flex;
-  vertical-align: middle;
+  justify-content: center;
   align-items: center;
-  
+  vertical-align: middle;
+  display: table-cell;
 }
 
 .welcome-section > .landing-image > img{
   object-fit: contain;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 400px;
-  height: 400px;
+  max-width: 500px;
+  max-height: 500px;
   /* padding: 10px; */
 }
