@@ -69,6 +69,6 @@ app.get("/dunzo", (req, res) => {
   res.send(arr);
 });
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("Port 3000 up and running!");
 });
