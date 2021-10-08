@@ -1,5 +1,5 @@
 .welcome-section{
-  height: 300px;
+  height: 500px;
 }
 
 .welcome-section > .landing-message > p{
@@ -9,8 +9,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  vertical-align: middle;
   display: table-cell;
+  vertical-align: middle;
+  user-select: none;
+}
+
+.welcome-section > .landing-image > .start-button >button{
+  margin: 20px;
+  text-align: center;
+  align-items: center;
+  color: brown;
 }
 
 .welcome-section > .landing-image > img{
