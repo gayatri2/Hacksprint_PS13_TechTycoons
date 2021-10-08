@@ -34,8 +34,12 @@ export default function Register() {
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
     console.log({
+      name: data.get('name'),
       email: data.get('email'),
       password: data.get('password'),
+      restaurant_name: data.get('restaurant_name'),
+      city: data.get('city'),
+      pin: data.get('pin')
     });
   };
 
@@ -101,12 +105,46 @@ export default function Register() {
                   autoComplete="new-password"
                 />
               </Grid>
+
               <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="restaurant_name"
+                  label="Restaurant Name"
+                  type="text"
+                  id="restaurant_name"
+                  autoComplete=""
+                />
+              </Grid>
+
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  autoComplete="city"
+                  name="city"
+                  required
+                  fullWidth
+                  id="city"
+                  label="City"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="pin"
+                  label="PIN Code"
+                  name="pincode"
+                  autoComplete="PIN code"
+                />
+              </Grid>
+
+              {/* <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
                   label="I want to receive inspiration, marketing promotions and updates via email."
                 />
-              </Grid>
+              </Grid> */}
             </Grid>
             <Button
               type="submit"

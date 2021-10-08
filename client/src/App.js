@@ -42,7 +42,7 @@ function App() {
           
           <Route exact path="/menu">
             <NavBar/>
-            {/* <Menu/> */}
+            <Menu/>
           </Route>
           <Route exact path="/inventory">
             <NavBar/>

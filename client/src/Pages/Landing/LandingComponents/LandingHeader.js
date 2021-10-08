@@ -1,5 +1,7 @@
 import React from "react";
 import "./landingHeader.css";
+import {NavLink} from 'react-router-dom'
+
 function LandingHeader() {
   return (
     <header>
@@ -10,14 +12,14 @@ function LandingHeader() {
         </a>
         <ul className="">
           <li>
-            <a className="" href="/login">
+            <NavLink to='/login'>
               Login
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a className="" href="/register">
+            <NavLink to='/register'>
               Signup
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>

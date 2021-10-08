@@ -1,22 +1,65 @@
 .welcome-section{
-  height: 300px;
+  height: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .welcome-section{
+    height: 800px;
+  }
+}
+
+.welcome-section > .landing-message {
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
+  user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+  .landing-message{
+    font-size: 38px;
+  }
 }
 
 .welcome-section > .landing-message > p{
   font-size: 48px;
-  font-weight: 800;
-  line-height: 60px;
-  display: flex;
-  vertical-align: middle;
-  align-items: center;
-  
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: normal;
+}
+
+/* .landing-signup */
+.landing-message > .start-button >button {
+  display: inline-block;
+  padding: 12px;
+  width: 160px;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  margin: 5px;
+}
+.landing-message > .start-button >button > a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.landing-message > .start-button > button:hover{
+  box-shadow: 1px 4px 20px rgb(163, 100, 223);
 }
 
 .welcome-section > .landing-image > img{
-  object-fit: contain;
+  /* object-fit: contain; */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 400px;
-  height: 400px;
+  /* max-width: 500px;
+  max-height: 500px; */
   /* padding: 10px; */
 }
