@@ -1,0 +1,33 @@
+.order-card{
+    background-color:#A6E3E9;
+    padding: 20px;
+    border-radius: 20px;
+    /* margin: 10px; */
+  }
+  
+  .order-table
+  {
+    /* background-color:#EEEEEE; */
+    text-align: center;
+  }
+  
+  .order-table > table > tr{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .order-table > table > tr > th, td{
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .order-table > table > tr > th, td{
+      padding-right: 4px;
+      padding-left: 4px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }

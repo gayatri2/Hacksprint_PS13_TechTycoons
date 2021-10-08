@@ -1,15 +1,24 @@
 import React from 'react'
 import { Card , Nav } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
+import CardList from '../../Components/CardList/CardList';
 import DataOne from '../../orderDataOne';
 import DataTwo from '../../orderDataTwo';
+
+
+  
+     
 const Dashboard=()=> {
+
   const location = useLocation();
   const locationHash = location.hash
-  var Data=DataOne
-  if(locationHash=="#pending") Data=DataOne;
-  else if(locationHash=="#completed") Data=DataTwo;
- 
+
+
+  var data = DataOne
+  if(locationHash=="#pending") data=DataOne;
+  else if(locationHash=="#completed") data=DataTwo;
+  // const orders = JSON.parse(data);
+  console.log(data)
   return (
     <div>
       <Card>
@@ -26,7 +35,7 @@ const Dashboard=()=> {
       </Card.Header>
       <Card.Body>
        
-        
+      <CardList orders={data} />
       
       </Card.Body>
     </Card>
