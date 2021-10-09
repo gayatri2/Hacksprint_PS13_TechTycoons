@@ -16,7 +16,7 @@ const CardList = props => {
   console.log(props.orders)
     return (
       <div>
-       {props.orders.map(order => (<OrderCard key={order._id} order= {order} /> ) )}
+       {props.orders.map(orderObj => (<OrderCard key={orderObj._id} orderObj= {orderObj} /> ) )}
       </div>
     );
 };

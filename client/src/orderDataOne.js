@@ -3,7 +3,8 @@ const DataOne=[
         "_id": "615ff7af559fac1f4360be1a",
         "restaurant_id": "1",
         "order": [
-            "[{'Pavbhaji':{0,2}}]"
+            "{'Pavbhaji':{0,1}}",
+            "{'Chole':{0,1}}"
         ],
         "total_cost": 200,
         "source": "zomato",
@@ -17,7 +18,8 @@ const DataOne=[
         "_id": "615ff81a559fac1f4360be1d",
         "restaurant_id": "1",
         "order": [
-            "[{'Pavbhaji':{0,1}},{'Chole':{0,1}}]"
+            "{'Pavbhaji':{0,1}}",
+            "{'Chole':{0,1}}"
         ],
         "total_cost": 500,
         "source": "zomato",
