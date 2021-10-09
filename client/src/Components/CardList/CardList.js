@@ -1,5 +1,5 @@
-import React from 'react';
-import OrderCard from '../OrderCard/OrderCard'
+import React from "react";
+import OrderCard from "../OrderCard/OrderCard";
 
 const CardList = props => {
     // const cardsArray = orders.map(order => (
@@ -20,4 +20,4 @@ const CardList = props => {
       </div>
     );
 };
-export default CardList
+export default CardList;
