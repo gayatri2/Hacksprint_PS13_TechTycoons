@@ -31,12 +31,13 @@ const Ul = styled.ul`
 `;
 
 const RightHeader = ({ open, currentUser }) => (
-  <Ul className="main-header" open={open}>
+  <Ul className="main-header" open={open} >
     <li>
       <NavLink
         to="/dashboard#pending"
         className="option"
         activeClassName="active__option"
+        style={{marginLeft:"690px"}}
       >
         Dashboard
       </NavLink>

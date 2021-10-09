@@ -12,7 +12,18 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
+// import Typography from "@material-ui/core/Typography";
 
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+    marginTop:"40px"
+  }
+});
 function Copyright(props) {
   return (
     <Typography
@@ -43,6 +54,7 @@ export default function Login() {
     //   password: data.get('password'),
     // });
   };
+  const classes = useStyles();
 
   return (
     <ThemeProvider theme={theme}>
@@ -68,16 +80,7 @@ export default function Login() {
             noValidate
             sx={{ mt: 1 }}
           >
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="quantity"
-              label="Product quantity"
-              name="quantity"
-              autoComplete="quantity"
-              autoFocus
-            />
+            
             <TextField
               margin="normal"
               required
@@ -87,6 +90,16 @@ export default function Login() {
               type="name"
               id="name"
               autoComplete="name"
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="quantity"
+              label="Product quantity"
+              name="quantity"
+              autoComplete="quantity"
+              autoFocus
             />
             {/* <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -103,8 +116,23 @@ export default function Login() {
             <Grid container></Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
+        {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
+      </Container>
+      <Container>
+      <Card className={classes.root}>
+      <CardActionArea>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Product name
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Quantity
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
       </Container>
     </ThemeProvider>
+    
   );
 }

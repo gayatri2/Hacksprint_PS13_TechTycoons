@@ -8,7 +8,7 @@ function LandingDiv3Cards() {
   return (
     <div>
       <div className="container">
-        <div style={{textAlign: "center"}}>
+        <div style={{marginLeft:"250px"}}>
           <h2>What can you do here?</h2>
         </div>
         <div className="row">

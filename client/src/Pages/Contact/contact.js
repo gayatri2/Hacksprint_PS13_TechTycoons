@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './contact.css';
-import logo from '../../assets/Hackathon-logo.jpg';
+import logo from '../../assets/contact-me.png';
 import emailjs from 'emailjs-com';
 // import Noty from 'noty';
 import{ init } from 'emailjs-com';
@@ -55,7 +55,7 @@ export default function Contact() {
 				<h1>Contact Details</h1>
 				<div className='contact'>
 					<div className='contact__left'>
-						<img src={logo} alt='logo' />
+						<img src={logo} alt='logo' style={{width:"350px",height:"350px",marginBottom:"-50px"}} />
 						<div className='contact__detail'>
 							<h5>Contact Us On</h5>
 							<a href='mailto:gayatri.godbole02@gmail.com' target='blank'>

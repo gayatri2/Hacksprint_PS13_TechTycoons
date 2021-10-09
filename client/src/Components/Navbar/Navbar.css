@@ -7,7 +7,9 @@
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
-  background: rgb(34,34,34);
+  background:rgb(34,34,34);
+  text-decoration: none;
+
 }
 
 .option{
@@ -19,4 +21,5 @@
   color: white;
   font-weight: 600;
   font-size: 22px;
+  text-decoration: none;
 }
