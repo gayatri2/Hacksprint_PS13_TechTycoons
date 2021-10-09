@@ -45,6 +45,7 @@ const OrderCard = (props) => {
                   class="btn btn-danger"
                   onClick={(e) => {
                     e.target.style.backgroundColor = "green";
+                    return null;
                   }}
                 >
                   Status

@@ -18,7 +18,7 @@ const getInventory = async (req, res) => {
   }
   const { restaurant_id } = req.body;
   try {
-    const inventoryArr = await Inventory.find({ restaurant_id: restaurant_id });
+    const inventoryArr = await Inventory.find();
     if (inventoryArr) {
       res.send(inventoryArr);
     } else {
