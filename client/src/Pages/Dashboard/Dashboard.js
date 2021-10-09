@@ -5,6 +5,7 @@ import CardList from "../../Components/CardList/CardList";
 import DataOne from "../../orderDataOne";
 import DataTwo from "../../orderDataTwo";
 import axios from "axios";
+
 const Dashboard = () => {
   const location = useLocation();
   const locationHash = location.hash;
