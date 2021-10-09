@@ -17,12 +17,12 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 // import Typography from "@material-ui/core/Typography";
-
+import axios from "axios";
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    marginTop:"40px"
-  }
+    marginTop: "40px",
+  },
 });
 function Copyright(props) {
   return (
@@ -48,6 +48,16 @@ export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    var obj = {};
+    obj["product_name"] = data.get("name");
+    obj["product_quantity"] = data.get("quantity");
+    axios({
+      method: "post",
+      url: "http://localhost:5000/inventory",
+      data: obj,
+    }).then((result) => {
+      console.log(result);
+    });
     // eslint-disable-next-line no-console
     // console.log({
     //   email: data.get('email'),
@@ -80,7 +90,6 @@ export default function Login() {
             noValidate
             sx={{ mt: 1 }}
           >
-            
             <TextField
               margin="normal"
               required
@@ -119,20 +128,19 @@ export default function Login() {
         {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
       </Container>
       <Container>
-      <Card className={classes.root}>
-      <CardActionArea>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Product name
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Quantity
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Product name
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Quantity
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
       </Container>
     </ThemeProvider>
-    
   );
 }
