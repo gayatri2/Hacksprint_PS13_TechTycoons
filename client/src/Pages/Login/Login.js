@@ -54,7 +54,7 @@ export default function Login() {
       })
       .catch((err) => {
         console.log(err.message);
-        toast.error(err.message, {
+        toast.error("Something went wrong!", {
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
