@@ -3,6 +3,7 @@ const app = express();
 const connectDB = require("./config/db");
 const axios = require("axios");
 const Menu = require("./models/menu");
+const cors = require("cors");
 //Connect DB
 connectDB();
 
@@ -10,7 +11,7 @@ const getOrders = async (arg) => {
   const result = await axios(
     "https://rest-aggregators-dummy.herokuapp.com/" + arg
   );
-  console.log("https://rest-aggregators-dummy.herokuapp.com/" + arg);
+  console.log(result.data);
   var restaurant_id = 1;
   var totalCost = 0;
   order_arr = [];
@@ -65,7 +66,7 @@ const getOrders = async (arg) => {
 };
 //Init Middleware for body parsing
 app.use(express.json({ extended: false }));
-
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {

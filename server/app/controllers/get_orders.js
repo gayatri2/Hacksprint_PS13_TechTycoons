@@ -16,10 +16,11 @@ const getOrder = async (req, res) => {
       errors: errors.array(),
     });
   }
-  const { restaurant_id } = req.body;
+  // const { restaurant_id } = req.body;
   try {
-    const orderArr = await Order.find({ restaurant_id: restaurant_id });
+    const orderArr = await Order.find();
     if (orderArr) {
+      console.log(orderArr);
       res.send(orderArr);
     } else {
       res.send({ msg: "No others yet" });
