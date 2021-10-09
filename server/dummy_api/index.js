@@ -45,7 +45,7 @@ const createOrder = () => {
     res.push(obj);
   }
   obj1 = {};
-  obj1["DeliveryBoy"] = boys[Math.floor(Math.random() * (8 - 0 + 1) + 0)];
+  obj1["DeliveryBoy"] = boys[Math.floor(Math.random() * (7 - 0 + 1) + 0)];
   res.push(obj1);
   return res;
 };
