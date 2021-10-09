@@ -25,7 +25,7 @@ class Invoice extends React.Component {
   render() {
    
     return (
-    <div className="App container mt-5">
+    <div className="container mt-5">
      <button class="btn btn-primary" onClick={this.printDocument}>Export To PDF</button>
     <div id="divToPrint" className="m-3">
     <div class="row d-flex justify-content-center">

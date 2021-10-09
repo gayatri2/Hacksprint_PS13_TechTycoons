@@ -13,12 +13,12 @@
 }
 
 .contactus{
-	color: #01A29A;
+	color: #7d5fff;
 	font-weight: 700;
 	padding: 20px 0 20px 0;
 }
  .contact__box h1 {
-	color: #FFB40A;
+	color: #7d5fff;
 	font-weight: 700;
 	padding: 30px 0 20px 0;
 }
@@ -28,7 +28,7 @@
 }
 
 .contactus .contact__box .contact .contact__left {
-	border-right: 1px solid #FFB40A;
+	border-right: 1px solid #7d5fff;
 	width: 50%;
 	margin-bottom: 50px;
 }
@@ -59,7 +59,7 @@
 .contactus .contact__box .contact .contact__left .contact__detail p i {
 	margin-right: 30px;
 	font-weight: bold;
-	color: #01A29A;
+	color: #7d5fff;
 }
 
 .contactus .contact__box .contact .contact__form {
@@ -102,7 +102,7 @@
 .contactus .contact__box .contact .contact__form .submit {
 	font-size: 18px;
 	color: white;
-	background-color: #01A29A;
+	background-color: #7d5fff;
 	padding: 10px 20px;
 	text-transform: uppercase;
 	margin-bottom: 60px;
@@ -111,7 +111,7 @@
 }
 
 .contactus .contact__box .contact .contact__form .submit:hover {
-	border: 1px solid #01A29A;
+	border: 1px solid #7d5fff;
 	background-color: transparent;
 	color: #01A29A;
 }
@@ -134,7 +134,7 @@
 	}
 	.contactus .contact__box .contact .contact__left {
 		width: 100%;
-		border-bottom: 1px solid #FFB40A;
+		border-bottom: 1px solid #7d5fff;
 		border-right: none !important;
 	}
 

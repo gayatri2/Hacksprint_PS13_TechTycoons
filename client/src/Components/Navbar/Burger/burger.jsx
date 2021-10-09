@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import RightHeader from '../headers/headers.component';
-
+import { NavContext } from '../../../NavProvider';
 const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
@@ -36,11 +36,11 @@ const StyledBurger = styled.div`
 `;
 
 const Burger = () => {
-  const [open, setOpen] = useState(false)
+  const {open, toggleOpen} = useContext(NavContext)
   
   return (
     <>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger open={open} onClick={toggleOpen}>
         <div />
         <div />
         <div />

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./OrderCard.css";
+import {Link} from 'react-router-dom'
 
 const OrderCard = (props) => {
   const { order } = props;
@@ -58,9 +59,12 @@ const OrderCard = (props) => {
                 </p>
               </div>
               <div className="col-3 text-right">
-                <button type="button" class="btn btn-dark">
-                  Print
-                </button>
+               <Link to='/invoice'> 
+                  <button  type="button" class="btn btn-dark">
+                    Print
+                  </button>
+               </Link>
+                
               </div>
             </div>
           </div>
