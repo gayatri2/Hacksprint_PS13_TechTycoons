@@ -5,7 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -14,7 +14,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import { useHistory } from "react-router-dom";
 function Copyright(props) {
   return (
     <Typography
@@ -36,6 +36,7 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
+  const history = useHistory();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -50,7 +51,7 @@ export default function Login() {
     })
       .then((result) => {
         console.log(result);
-        
+        history.push("/dashboard#pending");
       })
       .catch((err) => {
         console.log(err.message);

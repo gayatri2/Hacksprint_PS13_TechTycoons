@@ -31,7 +31,7 @@ const inventory = async (req, res) => {
       res.json({ msg: "Item updated in DB." });
     } else {
       item = new Inventory({
-        restaurant_id: restaurant_id,
+        restaurant_id: 1,
         product_name: product_name,
         product_quantity: product_quantity,
       });
