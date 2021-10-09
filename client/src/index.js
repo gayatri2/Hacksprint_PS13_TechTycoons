@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import NavProvider from './NavProvider'
 ReactDOM.render(
   <React.StrictMode>
+    <NavProvider>
     <App />
+ </NavProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -33,7 +33,7 @@
 @media (max-width: 768px) {
   .navbar ul {
     flex-flow: column nowrap;
-    background-color: blueviolet;
+    background-color: rgb(34,34,34);
     position: fixed;
     top: 0;
     right: 0;

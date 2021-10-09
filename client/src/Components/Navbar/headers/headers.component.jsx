@@ -1,7 +1,7 @@
-import React from "react";
+import React,{useContext} from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-
+import { NavContext } from "../../../NavProvider";
 import "./headers.component.css";
 
 const Ul = styled.ul`
@@ -30,14 +30,17 @@ const Ul = styled.ul`
   }
 `;
 
-const RightHeader = ({ open, currentUser }) => (
+const RightHeader = () => {
+  const {open , toggleOpen} = useContext(NavContext)   
+  return(
   <Ul className="main-header" open={open} >
     <li>
       <NavLink
         to="/dashboard#pending"
         className="option"
         activeClassName="active__option"
-        style={{marginLeft:"690px"}}
+        onClick={toggleOpen}
+        // style={{marginLeft:"690px"}}
       >
         Dashboard
       </NavLink>
@@ -49,6 +52,7 @@ const RightHeader = ({ open, currentUser }) => (
         exact={true}
         className="option"
         activeClassName="active__option"
+        onClick={toggleOpen}
       >
         Menu
       </NavLink>
@@ -59,6 +63,7 @@ const RightHeader = ({ open, currentUser }) => (
         to="/inventory"
         className="option"
         activeClassName="active__option"
+        onClick={toggleOpen}
       >
         Inventory
       </NavLink>
@@ -69,16 +74,17 @@ const RightHeader = ({ open, currentUser }) => (
         to="/contact-us"
         className="option"
         activeClassName="active__option"
+        onClick={toggleOpen}
       >
         Contact Us
       </NavLink>
     </li>
     <li>
-      <NavLink className="option" activeClassName="active__option" to="/login">
+      <NavLink className="option" activeClassName="active__option" to="/login" onClick={toggleOpen}>
         Logout
       </NavLink>
     </li>
   </Ul>
-);
+)};
 
 export default RightHeader;
