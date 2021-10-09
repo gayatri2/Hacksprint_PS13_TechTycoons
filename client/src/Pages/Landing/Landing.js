@@ -9,6 +9,7 @@ function Landing() {
       {/* <h1>HI</h1> */}
 
       <LandingHeader />
+      <h1 style={{textAlign:"center",fontFamily:"Birthstone",fontSize:"80px",color:"#6958EC"}}>"hub4food"</h1>
 
       <LandingDiv2 />
 
