@@ -13,6 +13,7 @@ import Register from "./Pages/Register/Register";
 import Contact from "./Pages/Contact/contact";
 import Footer from "./Components/Footer/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Invoice from "./Components/Invoice/invoice";
 function App() {
   return (
     <BrowserRouter>
@@ -124,6 +125,26 @@ function App() {
 
             {/* <Inventory/> */}
           </Route>
+
+          <Route exact path="/invoice">
+            <NavBar />
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+        />
+          <Invoice />
+            <Footer />
+
+            {/* <Inventory/> */}
+          </Route>
+
         </Switch>
       </div>
     </BrowserRouter>
