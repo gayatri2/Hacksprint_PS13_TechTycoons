@@ -35,7 +35,7 @@ function App() {
               pauseOnFocusLoss
               draggable
               pauseOnHover
-        />
+            />
             <Dashboard />
             <Footer />
           </Route>
@@ -46,32 +46,32 @@ function App() {
           </Route> */}
 
           <Route exact path="/login">
-                <ToastContainer
-                    position="top-center"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-              />
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
             <Login />
           </Route>
 
           <Route exact path="/register">
-                <ToastContainer
-                    position="top-center"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-              />
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
             <Register />
           </Route>
 
@@ -87,10 +87,10 @@ function App() {
               pauseOnFocusLoss
               draggable
               pauseOnHover
-        />
+            />
             <Menu />
           </Route>
-         
+
           <Route exact path="/inventory">
             <NavBar />
             <ToastContainer
@@ -103,10 +103,10 @@ function App() {
               pauseOnFocusLoss
               draggable
               pauseOnHover
-        />
-            <Inventory/>
+            />
+            <Inventory />
           </Route>
-          
+
           <Route exact path="/contact-us">
             <NavBar />
             <ToastContainer
@@ -119,14 +119,14 @@ function App() {
               pauseOnFocusLoss
               draggable
               pauseOnHover
-        />
+            />
             <Contact />
             <Footer />
 
             {/* <Inventory/> */}
           </Route>
 
-          <Route exact path="/invoice">
+          <Route exact path="/invoice/:index">
             <NavBar />
             <ToastContainer
               position="top-center"
@@ -138,13 +138,12 @@ function App() {
               pauseOnFocusLoss
               draggable
               pauseOnHover
-        />
-          <Invoice />
+            />
+            <Invoice />
             <Footer />
 
             {/* <Inventory/> */}
           </Route>
-
         </Switch>
       </div>
     </BrowserRouter>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./OrderCard.css";
-
+import { Link } from "react-router-dom";
 const OrderCard = (props) => {
   const [val, setVal] = React.useState({
     _id: "",
@@ -15,7 +15,8 @@ const OrderCard = (props) => {
     root: {},
   });
 
-  const { order } = props;
+  const { order, orderIndex } = props;
+  const url = "/invoice/" + orderIndex;
   val["_id"] = order._id;
   val["restaurant_id"] = order.restaurant_id;
   val["order"] = order.order;
@@ -72,7 +73,11 @@ const OrderCard = (props) => {
             </div>
             <div className="col-7 text-right">
               <p>
-                Arrived: <b>10:00 PM</b>
+                Arrived at:{" "}
+                <b>
+                  {new Date(order.createdAt).getHours()}:
+                  {new Date(order.createdAt).getHours()}
+                </b>
               </p>
             </div>
           </div>
@@ -100,9 +105,9 @@ const OrderCard = (props) => {
                 </p>
               </div>
               <div className="col-3 text-right">
-                <button type="button" class="btn btn-dark">
-                  Print
-                </button>
+                <Link to={url}>
+                  <button type="button">Print</button>
+                </Link>
               </div>
             </div>
           </div>

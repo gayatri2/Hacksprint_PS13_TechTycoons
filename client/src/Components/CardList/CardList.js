@@ -2,15 +2,14 @@ import React from "react";
 import OrderCard from "../OrderCard/OrderCard";
 
 const CardList = (props) => {
-  
   console.log(props.orders);
-  
+
   const { orders } = props;
 
   if (orders.length > 0) {
     return orders.map((item, index) => {
       console.log(item.source);
-      return <OrderCard order={item} />;
+      return <OrderCard order={item} orderIndex={index} />;
     });
   } else {
     return (
