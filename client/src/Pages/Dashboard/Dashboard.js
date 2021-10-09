@@ -25,8 +25,8 @@ const Dashboard = () => {
   }, []);
 
   var data = DataOne;
-  if (locationHash == "#pending") data = DataOne;
-  else if (locationHash == "#completed") data = DataTwo;
+  if (locationHash === "#pending") data = DataOne;
+  else if (locationHash === "#completed") data = DataTwo;
   // const orders = JSON.parse(data);
   return (
     <div>
