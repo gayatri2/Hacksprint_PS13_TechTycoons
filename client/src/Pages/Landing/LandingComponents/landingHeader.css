@@ -1,6 +1,27 @@
 .landing-header-title {
-  font-size: larger;
+  font-size: 22px;
+  font-weight: 700;
   align-items: flex-start;
+  padding-left: 20px;
+}
+
+.landing-header-title > img{
+  height: 100px;
+  width: 180px;
+}
+
+.landing-header-title > span {
+  font-size: 28;
+  font-weight: 1000;
+  rotate: 4;
+  color: blueviolet;
+  transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 600px) {
+  .landing-header-title{
+    padding-left: 10px;
+  }
 }
 
 :root{

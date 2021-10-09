@@ -2,13 +2,15 @@ import React from "react";
 import "./landingHeader.css";
 import {NavLink} from 'react-router-dom'
 
+import f4u from "./LandingImages/f4u.png";
+
 function LandingHeader() {
   return (
     <header>
       <nav className="header-nav col-12">
         <a className="landing-header-title">
-          {/* <img src="https://storage.mindeskvr.com/static/mindesk-logo-white-50.png" /> */}
-          APP-NAME
+          {/* <img src={f4u} className="img-fluid" style={{}}/> */}
+          food<span>4</span>hub
         </a>
         <ul className="">
           <li>
