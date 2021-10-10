@@ -17,11 +17,12 @@ import Invoice from "./Components/Invoice/invoice";
 import PrintInvoice from "./Components/Invoice/printInvoice";
 import { useDispatch } from "react-redux";
 import React from "react";
-import { getInvent } from "./actions/invent";
+import { getOrder } from "./actions/invent";
+import CompletedDash from "./Pages/Dashboard/CompletedDashboard";
 function App() {
   const dispatch = useDispatch();
   React.useEffect(() => {
-    dispatch(getInvent());
+    dispatch(getOrder());
   }, [dispatch]);
   return (
     <BrowserRouter>
@@ -45,6 +46,22 @@ function App() {
               pauseOnHover
             />
             <Dashboard />
+            <Footer />
+          </Route>
+          <Route exact path="/completeddash">
+            <NavBar />
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
+            <CompletedDash />
             <Footer />
           </Route>
 

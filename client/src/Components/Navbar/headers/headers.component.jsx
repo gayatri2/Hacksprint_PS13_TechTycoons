@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { NavContext } from "../../../NavProvider";
@@ -31,60 +31,66 @@ const Ul = styled.ul`
 `;
 
 const RightHeader = () => {
-  const {open , toggleOpen} = useContext(NavContext)   
-  return(
-  <Ul className="main-header" open={open} >
-    <li>
-      <NavLink
-        to="/dashboard#pending"
-        className="option"
-        activeClassName="active__option"
-        onClick={toggleOpen}
-        // style={{marginLeft:"690px"}}
-      >
-        Dashboard
-      </NavLink>
-    </li>
+  const { open, toggleOpen } = useContext(NavContext);
+  return (
+    <Ul className="main-header" open={open}>
+      <li>
+        <NavLink
+          to="/dashboard"
+          className="option"
+          activeClassName="active__option"
+          onClick={toggleOpen}
+          // style={{marginLeft:"690px"}}
+        >
+          Dashboard
+        </NavLink>
+      </li>
 
-    <li>
-      <NavLink
-        to="/menu"
-        exact={true}
-        className="option"
-        activeClassName="active__option"
-        onClick={toggleOpen}
-      >
-        Menu
-      </NavLink>
-    </li>
+      <li>
+        <NavLink
+          to="/menu"
+          exact={true}
+          className="option"
+          activeClassName="active__option"
+          onClick={toggleOpen}
+        >
+          Menu
+        </NavLink>
+      </li>
 
-    <li>
-      <NavLink
-        to="/inventory"
-        className="option"
-        activeClassName="active__option"
-        onClick={toggleOpen}
-      >
-        Inventory
-      </NavLink>
-    </li>
+      <li>
+        <NavLink
+          to="/inventory"
+          className="option"
+          activeClassName="active__option"
+          onClick={toggleOpen}
+        >
+          Inventory
+        </NavLink>
+      </li>
 
-    <li>
-      <NavLink
-        to="/contact-us"
-        className="option"
-        activeClassName="active__option"
-        onClick={toggleOpen}
-      >
-        Contact Us
-      </NavLink>
-    </li>
-    <li>
-      <NavLink className="option" activeClassName="active__option" to="/login" onClick={toggleOpen}>
-        Logout
-      </NavLink>
-    </li>
-  </Ul>
-)};
+      <li>
+        <NavLink
+          to="/contact-us"
+          className="option"
+          activeClassName="active__option"
+          onClick={toggleOpen}
+        >
+          Contact Us
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="option"
+          activeClassName="active__option"
+          to="/login"
+          onClick={toggleOpen}
+        >
+          Logout
+        </NavLink>
+      </li>
+    </Ul>
+  );
+};
 
 export default RightHeader;

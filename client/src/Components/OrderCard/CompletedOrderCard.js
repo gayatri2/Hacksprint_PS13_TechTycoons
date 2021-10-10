@@ -3,7 +3,6 @@ import "./OrderCard.css";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addOrder } from "../../actions/invent";
-import { deletePost } from "../../actions/invent";
 import { Link } from "react-router-dom";
 
 const OrderCard = (props) => {
@@ -38,11 +37,7 @@ const OrderCard = (props) => {
     dispatch(addOrder(url));
     window.location.reload();
   };
-  const delete_val = (id) => {
-    dispatch(deletePost(id));
-    window.location.reload();
-  };
-  if (!val.status) {
+  if (val.status) {
     const mapItems = () => {
       return val.order.map((item, index) => {
         return (
@@ -94,20 +89,6 @@ const OrderCard = (props) => {
             </div>
           </div>
           <div className="row">
-            <div className="col-5">
-              <button
-                type="button"
-                class="btn btn-danger"
-                style={{ marginLeft: "230%" }}
-                onClick={() => {
-                  delete_val(val._id);
-                }}
-              >
-                Cancel
-              </button>
-            </div>
-          </div>
-          <div className="row">
             <div className="col-12 order-table">
               <table className="">
                 <tr>
@@ -137,9 +118,7 @@ const OrderCard = (props) => {
               </div>
               <div className="col-3 text-right">
                 <Link to={url}>
-                  <button type="button" class="btn btn-primary">
-                    Order Summary
-                  </button>
+                  <button type="button">Order Summary</button>
                 </Link>
               </div>
             </div>

@@ -51,7 +51,7 @@ export default function Login() {
     })
       .then((result) => {
         console.log(result);
-        history.push("/dashboard#pending");
+        history.push("/dashboard");
       })
       .catch((err) => {
         console.log(err.message);

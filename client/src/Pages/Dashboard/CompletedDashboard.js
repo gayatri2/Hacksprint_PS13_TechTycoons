@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Nav } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-import CardList from "../../Components/CardList/CardList";
+import CardList from "../../Components/CardList/CompleteCardlist";
 import DataOne from "../../orderDataOne";
 import DataTwo from "../../orderDataTwo";
 import axios from "axios";
@@ -29,14 +29,14 @@ const Dashboard = () => {
   //   getOrders();
   // }, []);
   // orderRedux.map((item, index) => {
-  //   if (item.status) {
+  //   if (!item.status) {
   //     orderRedux.splice(index, 1);
   //   }
   // });
-  console.log("incompleted", orderRedux);
-  // var data = DataOne;
-  // if (locationHash === "#pending") data = DataOne;
-  // else if (locationHash === "#completed") data = DataTwo;
+  console.log("completed", orderRedux);
+  var data = DataOne;
+  if (locationHash === "#pending") data = DataOne;
+  else if (locationHash === "#completed") data = DataTwo;
   // const orders = JSON.parse(data);
   return (
     <div>

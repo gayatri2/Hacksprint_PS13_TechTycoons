@@ -92,7 +92,7 @@ const Invoice = (props) => {
                   <table class="table table-borderless">
                     <tbody>
                       <tr class="add">
-                        <td>Item Nmae</td>
+                        <td>Item Name</td>
                         <td>Quantity</td>
                       </tr>
                       {mapItems()}

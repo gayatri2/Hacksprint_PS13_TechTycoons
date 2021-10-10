@@ -66,7 +66,7 @@ export default function Register() {
           draggable: true,
           progress: undefined,
         });
-        history.push("/dashboard#pending");
+        history.push("/dashboard");
       })
       .catch((err) => {
         console.log(err.message);
