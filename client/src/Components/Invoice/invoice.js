@@ -55,12 +55,6 @@ const Invoice = (props) => {
         <button class="btn btn-primary" onClick={printDocument}>
           Export To PDF
         </button>
-        <Link to="/printinvoice">
-          <button type="button">Click Me!</button>
-        </Link>
-        <button class="btn btn-primary" href="www.google.com">
-          Print
-        </button>
         <div id="divToPrint" className="m-3">
           <div class="row d-flex justify-content-center">
             <div class="col-md-8">
