@@ -16,6 +16,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addInvent } from "../../actions/invent";
 // import Typography from "@material-ui/core/Typography";
 import axios from "axios";
 const useStyles = makeStyles({
@@ -45,35 +48,20 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
+  const inventory = useSelector((state) => state.invent);
+  const dispatch = useDispatch();
+  console.log("trial", inventory);
   const [invent, setInvent] = React.useState([]);
-  const getInvent = () => {
-    var obj = {};
-    obj["restaurant_id"] = 1;
-    axios({
-      method: "get",
-      url: "http://localhost:5000/getinventory",
-      data: obj,
-    }).then((response) => {
-      setInvent(response.data);
-      console.log(response);
-    });
-  };
-  React.useEffect(() => {
-    getInvent();
-  }, []);
 
   const handleSubmit = (event) => {
+    event.preventDefault();
+
     const data = new FormData(event.currentTarget);
     var obj = {};
     obj["product_name"] = data.get("name");
     obj["product_quantity"] = data.get("quantity");
-    axios({
-      method: "post",
-      url: "http://localhost:5000/inventory",
-      data: obj,
-    }).then((result) => {
-      console.log(result);
-    });
+    dispatch(addInvent(obj));
+
     // eslint-disable-next-line no-console
     // console.log({
     //   email: data.get('email'),
@@ -81,7 +69,7 @@ export default function Login() {
     // });
   };
   const classes = useStyles();
-  if (invent) {
+  if (inventory.length) {
     return (
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
@@ -151,7 +139,7 @@ export default function Login() {
           bgcolor="background.paper"
           sx={{ maxWidth: "200" }}
         >
-          {invent.map((item, index) => {
+          {inventory.map((item, index) => {
             console.log(item.source);
             return (
               <Container>

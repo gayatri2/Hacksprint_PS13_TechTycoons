@@ -83,6 +83,6 @@ app.use("/getmenu", require("./routes/get_menu"));
 app.use("/getorder", require("./routes/get_order"));
 app.use("/inventory", require("./routes/inventory"));
 app.use("/getinventory", require("./routes/get_inventory"));
-
+app.use("/updateorder/:order_id/:index", require("./routes/update_order"));
 // getOrders("zomato");
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

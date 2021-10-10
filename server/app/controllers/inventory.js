@@ -38,8 +38,11 @@ const inventory = async (req, res) => {
 
       // //save to DB
       item.save();
-
-      res.json({ msg: "Item saved to DB." });
+      // const resItem = await Inventory.findOne({
+      //   product_name: product_name,
+      //   product_quantity: product_quantity,
+      // });
+      res.json(item);
     }
   } catch (err) {
     console.error(err.message);

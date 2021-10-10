@@ -108,7 +108,7 @@ const OrderCard = (props) => {
               </div>
               <div className="col-3 text-right">
                 <Link to={url}>
-                  <button type="button">Print</button>
+                  <button type="button">Order Summary</button>
                 </Link>
               </div>
             </div>

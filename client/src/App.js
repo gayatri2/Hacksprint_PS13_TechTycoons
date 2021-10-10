@@ -14,7 +14,15 @@ import Contact from "./Pages/Contact/contact";
 import Footer from "./Components/Footer/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Invoice from "./Components/Invoice/invoice";
+import PrintInvoice from "./Components/Invoice/printInvoice";
+import { useDispatch } from "react-redux";
+import React from "react";
+import { getInvent } from "./actions/invent";
 function App() {
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    dispatch(getInvent());
+  }, [dispatch]);
   return (
     <BrowserRouter>
       <div className="App">
@@ -140,6 +148,24 @@ function App() {
               pauseOnHover
             />
             <Invoice />
+            <Footer />
+
+            {/* <Inventory/> */}
+          </Route>
+          <Route exact path="/printinvoice">
+            <NavBar />
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
+            <PrintInvoice />
             <Footer />
 
             {/* <Inventory/> */}

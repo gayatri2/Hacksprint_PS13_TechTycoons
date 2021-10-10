@@ -7,6 +7,7 @@ import pdfFonts from "pdfmake/build/vfs_fonts";
 import htmlToPdfmake from "html-to-pdfmake";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Invoice = (props) => {
   const params = useParams();
   const ind = params.index;
@@ -53,6 +54,12 @@ const Invoice = (props) => {
       <div className="App container mt-5">
         <button class="btn btn-primary" onClick={printDocument}>
           Export To PDF
+        </button>
+        <Link to="/printinvoice">
+          <button type="button">Click Me!</button>
+        </Link>
+        <button class="btn btn-primary" href="www.google.com">
+          Print
         </button>
         <div id="divToPrint" className="m-3">
           <div class="row d-flex justify-content-center">
